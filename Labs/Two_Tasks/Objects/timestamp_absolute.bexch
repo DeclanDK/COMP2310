@@ -1,0 +1,17 @@
+[GENERATED OBJECT FILE]
+b__timestamp_absolute.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Two_Tasks/two_tasks.gpr
+20150731004636
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Two_Tasks/Objects/timestamp_absolute.o
+[GENERATED SOURCE FILES]
+b__timestamp_absolute.ads
+b__timestamp_absolute.adb
+b__timestamp_absolute.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Two_Tasks/Objects/
+-L/Users/declan/Desktop/COMP2310/Two_Tasks/Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

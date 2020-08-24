@@ -1,0 +1,4 @@
+message_server.adb:16:12: (style) this token should be in column 10
+message_server.adb:18:09: (style) incorrect layout
+message_server.adb:20:16: (style) "end" in wrong column, should be in column 10
+message_server.adb:21:16: (style) "end" in wrong column, should be in column 10

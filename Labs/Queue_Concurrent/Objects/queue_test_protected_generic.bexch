@@ -1,0 +1,19 @@
+[GENERATED OBJECT FILE]
+b__queue_test_protected_generic.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Queue_Concurrent/queue_concurrent.gpr
+20150726085239
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Queue_Concurrent/Objects/queue_pack_protected_generic.o
+/Users/declan/Desktop/COMP2310/Queue_Concurrent/Objects/queue_test_protected_generic.o
+[GENERATED SOURCE FILES]
+b__queue_test_protected_generic.ads
+b__queue_test_protected_generic.adb
+b__queue_test_protected_generic.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Queue_Concurrent/Objects/
+-L/Users/declan/Desktop/COMP2310/Queue_Concurrent/Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

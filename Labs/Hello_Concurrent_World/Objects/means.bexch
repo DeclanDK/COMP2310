@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__means.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Hello_Concurrent_World/hello_concurrent_world.gpr
+20170722024136
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Hello_Concurrent_World/Objects/means.o
+[GENERATED SOURCE FILES]
+b__means.ads
+b__means.adb
+b__means.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Hello_Concurrent_World/Objects/
+-L/Users/declan/Desktop/COMP2310/Hello_Concurrent_World/Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

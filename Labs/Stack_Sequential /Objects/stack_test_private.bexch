@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__stack_test_private.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Stack_Sequential /stack_sequential.gpr
+20200804044359
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Stack_Sequential /Objects/stack_pack_private.o
+/Users/declan/Desktop/COMP2310/Stack_Sequential /Objects/stack_test_private.o
+[GENERATED SOURCE FILES]
+b__stack_test_private.ads
+b__stack_test_private.adb
+b__stack_test_private.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Stack_Sequential /Objects/
+-L/Users/declan/Desktop/COMP2310/Stack_Sequential /Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

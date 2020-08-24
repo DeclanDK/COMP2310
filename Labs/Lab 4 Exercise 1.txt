@@ -1,0 +1,5 @@
+So initially, we have 10 tasks all attempting to count to a certain number, this is the case for both Unprotected_Element and Protected_Element. We can see that the Protected_Element is correctly counted to each time, 10 tasks counting 1000 times result in a total of 10,000, however, this is not the case for the Unprotected_Element. This is because the Unprotected_Element can be interrupted at any time which can result in counting errors or older values being loaded and replacing previous increments etc. 
+
+If we switch the inner for-loops, we can see that the Unprotected values will get much closer to their goal because the Protected Elements are being counted to without interruption, because they are protected, which just means that unprotected elements increments are just interrupting each other.
+
+It seems that it would be very difficult to configure the unprotected elements to work perfectly without just changing them to protected elements, running the protected increments initially seems to increase the average element that the unprotected tasks will count to.

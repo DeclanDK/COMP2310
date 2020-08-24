@@ -1,0 +1,9 @@
+semaphores.adb:6:12: (style) trailing spaces not permitted
+semaphores.ads:2:01: (style) trailing spaces not permitted
+semaphores.ads:3:70: (style) trailing spaces not permitted
+semaphores.ads:4:01: (style) trailing spaces not permitted
+semaphores.ads:5:18: (style) trailing spaces not permitted
+semaphores.ads:7:01: (style) trailing spaces not permitted
+semaphores.ads:8:11: (style) trailing spaces not permitted
+semaphores.ads:10:01: (style) trailing spaces not permitted
+semaphores.ads:12:01: (style) trailing spaces not permitted

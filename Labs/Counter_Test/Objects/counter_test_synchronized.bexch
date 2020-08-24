@@ -1,0 +1,18 @@
+[GENERATED OBJECT FILE]
+b__counter_test_synchronized.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Counter_Test/counter_test.gpr
+20150801024103
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Counter_Test/Objects/counter_test_synchronized.o
+[GENERATED SOURCE FILES]
+b__counter_test_synchronized.ads
+b__counter_test_synchronized.adb
+b__counter_test_synchronized.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Counter_Test/Objects/
+-L/Users/declan/Desktop/COMP2310/Counter_Test/Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

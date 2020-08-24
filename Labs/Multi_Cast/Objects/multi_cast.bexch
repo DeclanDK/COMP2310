@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__multi_cast.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Multi_Cast/multi_cast.gpr
+20150809010644
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Multi_Cast/Objects/id_dispenser.o
+/Users/declan/Desktop/COMP2310/Multi_Cast/Objects/message_server.o
+/Users/declan/Desktop/COMP2310/Multi_Cast/Objects/multi_cast.o
+[GENERATED SOURCE FILES]
+b__multi_cast.ads
+b__multi_cast.adb
+b__multi_cast.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Multi_Cast/Objects/
+-L/Users/declan/Desktop/COMP2310/Multi_Cast/Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

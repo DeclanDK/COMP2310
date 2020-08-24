@@ -1,0 +1,121 @@
+V "GNAT Lib v2019"
+A -gnatA
+A -g
+A -gnatVa
+A -gnatVr
+A -gnatVp
+A -gnatVm
+A -gnatVi
+A -gnatVf
+A -gnatVe
+A -gnatVd
+A -gnatVc
+A -gnatVO
+A -gnatw.a
+A -gnatw.b
+A -gnatwc
+A -gnatw.c
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatw.h
+A -gnatwi
+A -gnatw.i
+A -gnatwj
+A -gnatwk
+A -gnatw.k
+A -gnatwl
+A -gnatw.l
+A -gnatwm
+A -gnatw.m
+A -gnatw.n
+A -gnatwo
+A -gnatw.o
+A -gnatwp
+A -gnatw.p
+A -gnatwq
+A -gnatwr
+A -gnatw.r
+A -gnatw.s
+A -gnatwt
+A -gnatw.t
+A -gnatwu
+A -gnatw.u
+A -gnatwv
+A -gnatw.v
+A -gnatww
+A -gnatw.w
+A -gnatwx
+A -gnatw.x
+A -gnatwy
+A -gnatwz
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyh
+A -gnatyf
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnato
+A -fstack-check=specific
+A -gnatE
+A -gnata
+A -g
+A -mtune=core2
+A -mmacosx-version-min=10.15.0
+A -fPIC
+A -feliminate-unused-debug-symbols
+P ZX
+
+RN
+RV NO_EXCEPTIONS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U stack_pack_private%b	stack_pack_private.adb	3d8193ae DE NE OO PK GE
+
+U stack_pack_private%s	stack_pack_private.ads	9de019f5 BN DE EE NE OO PK GE
+
+D stack_pack_private.ads  20200804050919 9de019f5 stack_pack_private%s
+D stack_pack_private.adb  20200804051115 a0618a5b stack_pack_private%b
+D system.ads		20190518041255 085b6ffb system%s
+G a e
+G c Z s b [stack_pack_private standard 7 9 none]
+X 1 stack_pack_private.ads
+5+9 Element 11r34 12r34 20r35 2|7r30 19r34
+6M9 Marker 20r24 22r19 22r30
+7k9*Stack_Pack_Private 5z9 6z9 20E9 26l5 26e23 2|5b14 39l5 39t23
+9R9*Queue_Type 11r58 12r58 14r31 15r31 21c9 25e14 2|7r54 19r58 33r31 36r30
+11U14*Enqueue 11>23 11=43 2|7b14 17l8 17t15
+11*23 Item{5+9} 2|7b23 14r38
+11r43 Queue{9R9} 2|7b39 10r19 14m7 14r23 15m7 15r25 16m7
+12U14*Dequeue 12<23 12=43 2|19b14 31l8 31t15
+12*23 Item{5+9} 2|19b23 25m7
+12r43 Queue{9R9} 2|19b43 21r20 25r15 25r31 26m7 26r21 28r10 28r22 29m10
+14V13*Is_Empty{boolean} 14>23 2|21s10 33b13
+14r23 Queue{9R9} 2|34r8
+15V13*Is_Full{boolean} 15>23 2|10s10 36b13
+15r23 Queue{9R9} 2|37r11 37r35 37r47
+17X4*Queue_overflow 2|11r16
+17X20*Queue_underflow 2|22r16
+20A9 List(5+9)<6M9> 24r19
+22*7 Top{6M9} 2|28r16 37r41
+22*12 Free{6M9} 2|14r29 15m13 15r31 25r37 26m13 26r27 28r28 37r53
+23b7 Is_Empty{boolean} 2|16m13 29m16 34r14 37r17
+24a7 Elements{20A9} 2|14m13 25r21
+

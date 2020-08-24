@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project >
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Queue_Sequential/queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Queue_Sequential/Sources/queue_pack_private.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Queue_Sequential/queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Queue_Sequential/Sources/queue_test_private.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Queue_Sequential/queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Queue_Sequential/Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Queue_Sequential/queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Queue_Sequential/Sources/queue_pack_private.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

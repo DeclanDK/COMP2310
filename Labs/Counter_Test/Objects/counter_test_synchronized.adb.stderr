@@ -1,0 +1,4 @@
+counter_test_synchronized.adb:8:01: (style) multiple blank lines
+counter_test_synchronized.adb:41:16: (style) redundant parentheses
+counter_test_synchronized.adb:41:33: (style) "and then" required
+counter_test_synchronized.adb:41:62: (style) "and then" required

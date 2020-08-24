@@ -1,0 +1,45 @@
+with Ada.Text_IO; use Ada.Text_IO;
+
+procedure Token_Ring is
+
+   Rounds : constant Positive := 10;
+   type Ring_Range is mod 5;
+
+   task type Ring_Task  is
+      entry Hand_over_Task_Id (Task_Id : Ring_Range);
+      entry Token;
+   end Ring_Task;
+
+   Ring : array (Ring_Range) of Ring_Task;
+
+   task body Ring_Task is
+
+      Activations : Natural := 0;
+      Id,
+      Next        : Ring_Range;
+
+   begin
+      accept Hand_over_Task_Id (Task_Id : Ring_Range) do
+         Id   := Task_Id;
+         Next := Id + 1;
+      end Hand_over_Task_Id;
+
+      while Activations < Rounds loop
+         accept Token;
+         Activations := Natural'Succ (Activations);
+         Ring (Next).Token;
+      end loop;
+
+--        Put_Line ("Task" & Ring_Range'Image (Id) & " saw" &
+--                    Natural'Image (Activations) & " tokens");
+   end Ring_Task;
+
+begin
+   for i in Ring'Range loop
+      Ring (i).Hand_over_Task_Id (i);
+   end loop;
+
+   Ring (Ring_Range'First).Token;
+
+   Put_Line ("Hello");
+end Token_Ring;

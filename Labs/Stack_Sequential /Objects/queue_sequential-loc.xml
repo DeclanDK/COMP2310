@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_test_private.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 20" line=" 8" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 33" line=" 21" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 17" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 28" line=" 8" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 6" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 4" line=" 16" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_test_private.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 11" line=" 7" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 16" line=" 9" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Stack_Sequential /queue_sequential.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Stack_Sequential /Sources/queue_pack_private.ads</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

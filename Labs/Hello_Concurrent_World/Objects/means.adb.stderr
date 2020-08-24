@@ -1,0 +1,5 @@
+means.adb:3:11: warning: file name does not match unit name, should be "main.adb"
+means.adb:22:04: (style) "end" in wrong column, should be in column 3
+means.adb:35:04: (style) "end" in wrong column, should be in column 3
+means.adb:43:01: (style) multiple blank lines
+means.adb:49:06: (style) "end" in wrong column, should be in column 4

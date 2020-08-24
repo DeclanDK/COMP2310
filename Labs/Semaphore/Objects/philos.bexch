@@ -1,0 +1,20 @@
+[GENERATED OBJECT FILE]
+b__philos.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Semaphore/semaphore.gpr
+20150809013930
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Semaphore/Objects/id_dispenser.o
+/Users/declan/Desktop/COMP2310/Semaphore/Objects/semaphores.o
+/Users/declan/Desktop/COMP2310/Semaphore/Objects/philos.o
+[GENERATED SOURCE FILES]
+b__philos.ads
+b__philos.adb
+b__philos.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Semaphore/Objects/
+-L/Users/declan/Desktop/COMP2310/Semaphore/Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

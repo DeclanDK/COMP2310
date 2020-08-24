@@ -1,0 +1,168 @@
+V "GNAT Lib v2019"
+M P W=b
+A -gnatA
+A -g
+A -gnatVa
+A -gnatVr
+A -gnatVp
+A -gnatVm
+A -gnatVi
+A -gnatVf
+A -gnatVe
+A -gnatVd
+A -gnatVc
+A -gnatVO
+A -gnatw.a
+A -gnatw.b
+A -gnatwc
+A -gnatw.c
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatw.h
+A -gnatwi
+A -gnatw.i
+A -gnatwj
+A -gnatwk
+A -gnatw.k
+A -gnatwl
+A -gnatw.l
+A -gnatwm
+A -gnatw.m
+A -gnatw.n
+A -gnatwo
+A -gnatw.o
+A -gnatwp
+A -gnatw.p
+A -gnatwq
+A -gnatwr
+A -gnatw.r
+A -gnatw.s
+A -gnatwt
+A -gnatw.t
+A -gnatwu
+A -gnatw.u
+A -gnatwv
+A -gnatw.v
+A -gnatww
+A -gnatw.w
+A -gnatwx
+A -gnatw.x
+A -gnatwy
+A -gnatwz
+A -gnat12
+A -gnatya
+A -gnatyA
+A -gnatyb
+A -gnatyB
+A -gnatyc
+A -gnatyC
+A -gnatye
+A -gnatyh
+A -gnatyf
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyO
+A -gnatyp
+A -gnatyr
+A -gnatyS
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -gnato
+A -fstack-check=specific
+A -gnatE
+A -gnata
+A -g
+A -mtune=core2
+A -mmacosx-version-min=10.15.0
+A -fPIC
+A -feliminate-unused-debug-symbols
+P ZX
+
+RN
+RV NO_EXCEPTION_HANDLERS
+RV NO_EXCEPTIONS
+RV NO_IO
+RV NO_IMPLICIT_CONDITIONALS
+RV NO_STANDARD_STORAGE_POOLS
+RV NO_DEFAULT_INITIALIZATION
+RV NO_DYNAMIC_SIZED_OBJECTS
+RV NO_IMPLEMENTATION_PRAGMAS
+RV NO_ELABORATION_CODE
+RV SPARK_05
+
+U stack_test_private%b	stack_test_private.adb	c53a54d2 DE NE OO SU
+W ada%s			ada.ads			ada.ali
+Z ada.exceptions%s	a-except.adb		a-except.ali
+Z ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
+W stack_pack_private%s	stack_pack_private.adb	stack_pack_private.ali
+Z system%s		system.ads		system.ali
+Z system.concat_2%s	s-conca2.adb		s-conca2.ali
+Z system.concat_3%s	s-conca3.adb		s-conca3.ali
+Z system.exception_table%s  s-exctab.adb	s-exctab.ali
+Z system.img_int%s	s-imgint.adb		s-imgint.ali
+Z system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20190518041255 76789da1 ada%s
+D a-except.ads		20190518041255 291912d5 ada.exceptions%s
+D a-ioexce.ads		20190518041254 e4a01f64 ada.io_exceptions%s
+D a-stream.ads		20190518041255 119b8fb3 ada.streams%s
+D a-tags.ads		20190518041256 491b781d ada.tags%s
+D a-textio.ads		20190518041256 aef4d56d ada.text_io%s
+D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
+D interfac.ads		20190518041254 5ab55268 interfaces%s
+D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
+D stack_pack_private.ads  20200804050919 9de019f5 stack_pack_private%s
+D stack_pack_private.adb  20200804051115 a0618a5b stack_pack_private%b
+D stack_test_private.adb  20200804051022 f62e984a stack_test_private%b
+D system.ads		20190518041255 085b6ffb system%s
+D s-conca2.ads		20190518041255 02a0d7d0 system.concat_2%s
+D s-conca3.ads		20190518041256 0b705ca5 system.concat_3%s
+D s-crtl.ads		20190518041254 0ebbdb71 system.crtl%s
+D s-exctab.ads		20190518041255 54135002 system.exception_table%s
+D s-ficobl.ads		20190518041256 078245e4 system.file_control_block%s
+D s-imgint.ads		20190518041254 02dbe0c2 system.img_int%s
+D s-parame.ads		20190518041256 48ec542b system.parameters%s
+D s-secsta.ads		20190518041256 20bbe636 system.secondary_stack%s
+D s-soflin.ads		20190518041255 a7318a92 system.soft_links%s
+D s-stache.ads		20190518041256 a37c21ec system.stack_checking%s
+D s-stalib.ads		20190518041256 09bd3940 system.standard_library%s
+D s-stoele.ads		20190518041256 2dc34a04 system.storage_elements%s
+D s-traent.ads		20190518041254 005bf670 system.traceback_entries%s
+D s-unstyp.ads		20190518041255 34867c83 system.unsigned_types%s
+D s-wchcon.ads		20190518041255 1b7d22d2 system.wch_con%s
+G a e
+G c Z b b [stack_test_private standard 8 11 none]
+G r i none [stack_test_private standard 8 11 none] [stack_pack_private standard 7 9 none]
+X 1 ada.ads
+16K9*Ada 20e8 12|6r6 6r30
+X 6 a-textio.ads
+57K13*Text_IO 727e16 12|6w10 6r34
+465U14*Put 12|34s28 35s28
+508U14*Put_Line 12|23s4 28s4 30s4 31s4
+X 10 stack_pack_private.ads
+5+9 Element 12|10r81
+6M9 Marker 12|10r59
+7k9*Stack_Pack_Private 26e23 12|5w6 10r39
+9R9 Queue_Type 12|14r19[10]
+11U14 Enqueue 12|19s4[10] 20s4[10] 25s4[10]
+11i23 Item{integer} 12|19r13[10] 20r13[10]
+11r43 Queue{9R9[12|10]} 12|19r28[10] 20r28[10]
+12U14 Dequeue 12|22s4[10] 27s4[10]
+14V13 Is_Empty{boolean} 12|30s34[10] 31s34[10]
+17X4 Queue_overflow 12|35r9[10]
+17X20 Queue_underflow 12|34r9[10]
+X 12 stack_test_private.adb
+8U11*Stack_Test_Private 8b11 36l5 36t23
+9M9 Stack_Size 10r69
+10K12 Stack_Pack_Positive[10|7] 11r8
+13r4 Queue_1{10|9R9[10]} 19m37 19r37 20m37 20r37 22m27 22r27 30r44
+14r4 Queue_2{10|9R9[10]} 25m27 25r27 27m27 27r27 31r44
+15i4 Current_Item{positive} 22m13 23r49 25r13 27m13 28r49
+
