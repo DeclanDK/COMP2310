@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Locations>
+  <Project>
+    <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 17" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 46" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 17" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 47" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 9" line=" 17" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 48" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 15" line=" 32" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/test_scoping.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Task_Scoping/Sources/task_scopes.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

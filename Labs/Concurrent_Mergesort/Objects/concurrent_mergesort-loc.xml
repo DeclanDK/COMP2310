@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Locations >
+  <Project>
+    <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_file>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/concurrent_mergesort.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/quicksort.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/cpu_counter.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/sorting_tests.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/sorting_tests.ads</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/test_concurrent_mergesort.adb</vfs_file>
+    </file_marker>
+    <file_marker column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/concurrent_mergesort.ads</vfs_file>
+    </file_marker>
+    <file_marker current="true" column=" 1" line=" 1" >
+      <vfs_project>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/concurrent_mergesort.gpr</vfs_project>
+      <vfs_file>/Users/declan/Desktop/COMP2310/Labs/Concurrent_Mergesort/Sources/concurrent_mergesort.adb</vfs_file>
+    </file_marker>
+  </Project>
+</Locations>

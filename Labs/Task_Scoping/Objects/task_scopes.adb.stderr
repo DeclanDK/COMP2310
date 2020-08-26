@@ -1,0 +1,2 @@
+task_scopes.adb:32:15: warning: type "Inner_Type_Ptr" is not referenced
+task_scopes.adb:48:18: warning: variable "Dynamic_Outer_Instance" is not referenced
