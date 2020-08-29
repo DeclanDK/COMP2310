@@ -1,0 +1,204 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <meta http-equiv="Content-Script-Type" content="text/javascript"/>
+
+  <title>
+    File: pipelined_insersort.adb
+  </title>
+  <link rel='stylesheet' href='support/docgen.css' type='text/css'/>
+  <link rel='stylesheet' href='support/tags.css' type='text/css'/>
+  <script src='support/docgen.js' type='text/javascript' charset='utf-8'></script>
+</head>
+<body onload="onloadDoc();">
+
+<div id='leftSide'>
+  <div id='leftSideInside'>
+  <div id='header'>
+    <h2 class="button">Documentation</h2>
+    <a href='toc.html'><div class="button2">Table of Contents</div></a>
+
+    <a href='tree.html'><div class="button2">Class Inheritance Tree</div></a>
+
+  </div>
+  </div>
+</div> <!-- leftSide -->
+
+<div class='subprograms'>
+  <div class='details'><ol><li id="l1"><pre><span class="keyword">with</span> Ada.Exceptions;               <span class="keyword">use</span> Ada.Exceptions; </pre></li>
+<li id="l2"><pre><span class="keyword">with</span> Ada.Numerics.Discrete_Random; <span class="keyword">use</span> Ada.Numerics; </pre></li>
+<li id="l3"><pre><span class="keyword">with</span> Ada.Text_IO;                  <span class="keyword">use</span> Ada.Text_IO; </pre></li>
+<li id="l4"><pre><span class="keyword">with</span> <span class="droplink">Queue_Pack_Protected_Generic<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l5" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l5"><pre><span class="keyword">with</span> <span class="droplink">Sync_Type<ul><li><a href="sync_type.ads.html#sync_type.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_sync_type.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_sync_type.adb.html#l1" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l6"><pre> </pre></li>
+<li id="l7"><pre><span class="keyword">procedure</span> Pipelined_Insersort <span class="keyword">is</span> </pre></li>
+<li id="l8"><pre> </pre></li>
+<li id="l9"><pre>   No_of_Nodes        : <span class="keyword">constant</span> Positive := 10; </pre></li>
+<li id="l10"><pre>   Data_Stream_Length : <span class="keyword">constant</span> Positive := 10_000; </pre></li>
+<li id="l11"><pre> </pre></li>
+<li id="l12"><pre>   <span class="keyword">type</span> Element <span class="keyword">is</span> <span class="keyword">range</span> 100 .. 999; </pre></li>
+<li id="l13"><pre> </pre></li>
+<li id="l14"><pre>   <span class="keyword">type</span> Maybe_Element (Valid : Boolean := False) <span class="keyword">is</span> </pre></li>
+<li id="l15"><pre>      <span class="keyword">record</span> </pre></li>
+<li id="l16"><pre>         <span class="keyword">case</span> Valid <span class="keyword">is</span> </pre></li>
+<li id="l17"><pre>            <span class="keyword">when</span> True  =&gt; Value : <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>; </pre></li>
+<li id="l18"><pre>            <span class="keyword">when</span> False =&gt; <span class="keyword">null</span>; </pre></li>
+<li id="l19"><pre>         <span class="keyword">end</span> <span class="keyword">case</span>; </pre></li>
+<li id="l20"><pre>      <span class="keyword">end</span> <span class="keyword">record</span>; </pre></li>
+<li id="l21"><pre> </pre></li>
+<li id="l22"><pre>   <span class="keyword">function</span> Invalid_Element             <span class="keyword">return</span> <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a> <span class="keyword">is</span> ((Valid =&gt; False)); </pre></li>
+<li id="l23"><pre>   <span class="keyword">function</span> Valid_Element (E : <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>) <span class="keyword">return</span> <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a> <span class="keyword">is</span> ((Valid =&gt; True, Value =&gt; <a href="src_pipelined_insersort.adb.html#l23" title="defined at pipelined_insersort.adb:23:28">E</a>)); </pre></li>
+<li id="l24"><pre> </pre></li>
+<li id="l25"><pre>   <span class="keyword">package</span> Random_Element <span class="keyword">is</span> <span class="keyword">new</span> Discrete_Random (Result_Subtype =&gt; <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>); </pre></li>
+<li id="l26"><pre>   <span class="keyword">use</span> <a href="src_pipelined_insersort.adb.html#l25" title="defined at pipelined_insersort.adb:25:12">Random_Element</a>; </pre></li>
+<li id="l27"><pre> </pre></li>
+<li id="l28"><pre>   Element_Generator : Generator; </pre></li>
+<li id="l29"><pre> </pre></li>
+<li id="l30"><pre>   <span class="keyword">package</span> Element_Queue <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Queue_Pack_Protected_Generic<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l5" title="To body">To body</a></li></ul></span> (<span class="droplink">Element<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l8" title="To spec">To spec</a></li></ul></span> =&gt; <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>, </pre></li>
+<li id="l31"><pre>                                                              <span class="droplink">Size<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:9:4" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l9" title="To spec">To spec</a></li></ul></span>    =&gt; <a href="src_pipelined_insersort.adb.html#l10" title="defined at pipelined_insersort.adb:10:4">Data_Stream_Length</a>); </pre></li>
+<li id="l32"><pre>   Result_Queue : <span class="droplink">Element_Queue.Protected_Queue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:15:19" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l15" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l33"><pre> </pre></li>
+<li id="l34"><pre>   <span class="keyword">type</span> Node; </pre></li>
+<li id="l35"><pre>   <span class="keyword">type</span> Node_Access <span class="keyword">is</span> <span class="keyword">access</span> <span class="keyword">all</span> <a href="src_pipelined_insersort.adb.html#l34" title="defined at pipelined_insersort.adb:34:9">Node</a>; </pre></li>
+<li id="l36"><pre> </pre></li>
+<li id="l37"><pre>   <span class="keyword">task</span> <span class="keyword">type</span> <a href="src_pipelined_insersort.adb.html#l42" title="defined at pipelined_insersort.adb:37:14">Node</a> <span class="keyword">is</span> </pre></li>
+<li id="l38"><pre>      <span class="keyword">entry</span> <a href="src_pipelined_insersort.adb.html#l119" title="defined at pipelined_insersort.adb:38:13">Link</a> (Next_Node : <a href="src_pipelined_insersort.adb.html#l35" title="defined at pipelined_insersort.adb:35:9">Node_Access</a>); </pre></li>
+<li id="l39"><pre>      <span class="keyword">entry</span> <a href="src_pipelined_insersort.adb.html#l124" title="defined at pipelined_insersort.adb:39:13">Feed</a> (E         : <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a>); </pre></li>
+<li id="l40"><pre>   <span class="keyword">end</span> <span class="droplink">Node<ul><li><a href="src_pipelined_insersort.adb.html#l37" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l42" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l41"><pre> </pre></li>
+<li id="l42"><pre>   <span class="keyword">task</span> <span class="keyword">body</span> <a href="src_pipelined_insersort.adb.html#l37" title="defined at pipelined_insersort.adb:37:14">Node</a> <span class="keyword">is</span> </pre></li>
+<li id="l43"><pre> </pre></li>
+<li id="l44"><pre>      Next  : <a href="src_pipelined_insersort.adb.html#l35" title="defined at pipelined_insersort.adb:35:9">Node_Access</a> := <span class="keyword">null</span>; </pre></li>
+<li id="l45"><pre> </pre></li>
+<li id="l46"><pre>      Node_Size : <span class="keyword">constant</span> Positive := (<a href="src_pipelined_insersort.adb.html#l10" title="defined at pipelined_insersort.adb:10:4">Data_Stream_Length</a> + <a href="src_pipelined_insersort.adb.html#l9" title="defined at pipelined_insersort.adb:9:4">No_of_Nodes</a> - 1) / <a href="src_pipelined_insersort.adb.html#l9" title="defined at pipelined_insersort.adb:9:4">No_of_Nodes</a>; </pre></li>
+<li id="l47"><pre> </pre></li>
+<li id="l48"><pre>      <span class="keyword">package</span> Maybe_Element_Queue <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Queue_Pack_Protected_Generic<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:11:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l11" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l5" title="To body">To body</a></li></ul></span> (<span class="droplink">Element<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:8:9" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l8" title="To spec">To spec</a></li></ul></span> =&gt; <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a>, </pre></li>
+<li id="l49"><pre>                                                                       <span class="droplink">Size<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:9:4" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l9" title="To spec">To spec</a></li></ul></span>    =&gt; Node_Size); </pre></li>
+<li id="l50"><pre>      Queue : <span class="droplink">Maybe_Element_Queue.Protected_Queue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:15:19" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l15" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l51"><pre> </pre></li>
+<li id="l52"><pre>      <span class="keyword">package</span> Sync_Maybe_Element <span class="keyword">is</span> <span class="keyword">new</span> <span class="droplink">Sync_Type<ul><li><a href="sync_type.ads.html#sync_type.ads:5:9" title="To API doc">To API doc</a></li><li><a href="src_sync_type.ads.html#l5" title="To spec">To spec</a></li><li><a href="src_sync_type.adb.html#l1" title="To body">To body</a></li></ul></span> (<span class="droplink">Element<ul><li><a href="sync_type.ads.html#sync_type.ads:2:9" title="To API doc">To API doc</a></li><li><a href="src_sync_type.ads.html#l2" title="To spec">To spec</a></li></ul></span> =&gt; <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a>, </pre></li>
+<li id="l53"><pre>                                                   <span class="droplink">Default<ul><li><a href="sync_type.ads.html#sync_type.ads:3:4" title="To API doc">To API doc</a></li><li><a href="src_sync_type.ads.html#l3" title="To spec">To spec</a></li></ul></span> =&gt; <a href="src_pipelined_insersort.adb.html#l22" title="defined at pipelined_insersort.adb:22:13">Invalid_Element</a>); </pre></li>
+<li id="l54"><pre> </pre></li>
+<li id="l55"><pre>      Max_Element : <span class="droplink">Sync_Maybe_Element.Protect<ul><li><a href="sync_type.ads.html#sync_type.ads:7:19" title="To API doc">To API doc</a></li><li><a href="src_sync_type.ads.html#l7" title="To spec">To spec</a></li></ul></span>; </pre></li>
+<li id="l56"><pre> </pre></li>
+<li id="l57"><pre>      <span class="keyword">task</span> Insert_Elements; </pre></li>
+<li id="l58"><pre>      <span class="keyword">task</span> <span class="keyword">body</span> Insert_Elements <span class="keyword">is</span> </pre></li>
+<li id="l59"><pre> </pre></li>
+<li id="l60"><pre>         <span class="keyword">subtype</span> Data_Length    <span class="keyword">is</span> Natural <span class="keyword">range</span> 0 .. Node_Size; </pre></li>
+<li id="l61"><pre>         <span class="keyword">subtype</span> Data_Index     <span class="keyword">is</span> Natural <span class="keyword">range</span> 1 .. Node_Size; </pre></li>
+<li id="l62"><pre>         <span class="keyword">subtype</span> Data_Index_Ext <span class="keyword">is</span> Natural <span class="keyword">range</span> 1 .. Node_Size + 1; </pre></li>
+<li id="l63"><pre> </pre></li>
+<li id="l64"><pre>         No_of_Elements : Data_Length := 0; </pre></li>
+<li id="l65"><pre> </pre></li>
+<li id="l66"><pre>         Data : <span class="keyword">array</span> (Data_Index) <span class="keyword">of</span> <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a> := (<span class="keyword">others</span> =&gt; <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>&apos;Invalid_Value); </pre></li>
+<li id="l67"><pre> </pre></li>
+<li id="l68"><pre>         <span class="keyword">function</span> Pipeline_Filled <span class="keyword">return</span> Boolean <span class="keyword">is</span> (No_of_Elements = Node_Size); </pre></li>
+<li id="l69"><pre> </pre></li>
+<li id="l70"><pre>      <span class="keyword">begin</span> </pre></li>
+<li id="l71"><pre>         Insert_Elements_Loop : <span class="keyword">loop</span> </pre></li>
+<li id="l72"><pre>            <span class="keyword">declare</span> </pre></li>
+<li id="l73"><pre>               Item : <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a> := <a href="src_pipelined_insersort.adb.html#l22" title="defined at pipelined_insersort.adb:22:13">Invalid_Element</a>; </pre></li>
+<li id="l74"><pre>            <span class="keyword">begin</span> </pre></li>
+<li id="l75"><pre>               <span class="droplink">Queue.Dequeue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:18:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l17" title="To body">To body</a></li></ul></span> (Item); </pre></li>
+<li id="l76"><pre>               <span class="keyword">if</span> Item.Valid <span class="keyword">then</span> </pre></li>
+<li id="l77"><pre>                  <span class="keyword">declare</span> </pre></li>
+<li id="l78"><pre>                     Spot : Data_Index_Ext := Data_Index_Ext&apos;First; </pre></li>
+<li id="l79"><pre>                  <span class="keyword">begin</span> </pre></li>
+<li id="l80"><pre>                     <span class="keyword">while</span> Spot &lt;= No_of_Elements <span class="keyword">and</span> <span class="keyword">then</span> Data (Spot) &lt; Item.Value <span class="keyword">loop</span> </pre></li>
+<li id="l81"><pre>                        Spot := Spot + 1; </pre></li>
+<li id="l82"><pre>                     <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l83"><pre>                     <span class="keyword">if</span> Pipeline_Filled <span class="keyword">and</span> <span class="keyword">then</span> Spot &gt; No_of_Elements <span class="keyword">then</span> </pre></li>
+<li id="l84"><pre>                        Next.<span class="keyword">all</span>.<span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span> (Item); </pre></li>
+<li id="l85"><pre>                     <span class="keyword">else</span> </pre></li>
+<li id="l86"><pre>                        <span class="keyword">if</span> Pipeline_Filled <span class="keyword">then</span> </pre></li>
+<li id="l87"><pre>                           Next.<span class="keyword">all</span>.<span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l23" title="defined at pipelined_insersort.adb:23:13">Valid_Element</a> (Data (No_of_Elements))); </pre></li>
+<li id="l88"><pre>                        <span class="keyword">else</span> </pre></li>
+<li id="l89"><pre>                           No_of_Elements := No_of_Elements + 1; </pre></li>
+<li id="l90"><pre>                        <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l91"><pre>                        Data (Spot + 1 .. No_of_Elements) := Data (Spot .. No_of_Elements - 1); </pre></li>
+<li id="l92"><pre>                        Data (Spot) := Item.Value; </pre></li>
+<li id="l93"><pre>                     <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l94"><pre>                  <span class="keyword">end</span>; </pre></li>
+<li id="l95"><pre> </pre></li>
+<li id="l96"><pre>                  <span class="keyword">if</span> Pipeline_Filled <span class="keyword">then</span> </pre></li>
+<li id="l97"><pre>                     <span class="droplink">Max_Element.Set<ul><li><a href="sync_type.ads.html#sync_type.ads:8:17" title="To API doc">To API doc</a></li><li><a href="src_sync_type.ads.html#l8" title="To spec">To spec</a></li><li><a href="src_sync_type.adb.html#l5" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l23" title="defined at pipelined_insersort.adb:23:13">Valid_Element</a> (Data (No_of_Elements))); </pre></li>
+<li id="l98"><pre>                  <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l99"><pre>               <span class="keyword">else</span> </pre></li>
+<li id="l100"><pre>                  Put_Line (<span class="string">&quot;Node reports&quot;</span> &amp; Data_Length&apos;Image (No_of_Elements) &amp; <span class="string">&quot; values from&quot;</span> &amp; <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>&apos;Image (Data (Data&apos;First)) &amp; <span class="string">&quot; to&quot;</span> &amp; <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>&apos;Image (Data (No_of_Elements))); </pre></li>
+<li id="l101"><pre>                  <span class="keyword">for</span> e <span class="keyword">of</span> Data (Data&apos;First .. No_of_Elements) <span class="keyword">loop</span> </pre></li>
+<li id="l102"><pre>                     <span class="droplink">Result_Queue.Enqueue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:17:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l9" title="To body">To body</a></li></ul></span> (e); </pre></li>
+<li id="l103"><pre>                  <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l104"><pre>                  <span class="keyword">if</span> Next /= <span class="keyword">null</span> <span class="keyword">then</span> </pre></li>
+<li id="l105"><pre>                     Next.<span class="keyword">all</span>.<span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span> (Item); </pre></li>
+<li id="l106"><pre>                  <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l107"><pre>                  <span class="keyword">exit</span> Insert_Elements_Loop; </pre></li>
+<li id="l108"><pre>               <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l109"><pre>            <span class="keyword">end</span>; </pre></li>
+<li id="l110"><pre>         <span class="keyword">end</span> <span class="keyword">loop</span> Insert_Elements_Loop; </pre></li>
+<li id="l111"><pre> </pre></li>
+<li id="l112"><pre>      <span class="keyword">exception</span> </pre></li>
+<li id="l113"><pre>         <span class="keyword">when</span> E : <span class="keyword">others</span> =&gt; Put_Line (Exception_Information (E)); </pre></li>
+<li id="l114"><pre>      <span class="keyword">end</span> Insert_Elements; </pre></li>
+<li id="l115"><pre> </pre></li>
+<li id="l116"><pre>      Node_Active : Boolean := True; </pre></li>
+<li id="l117"><pre> </pre></li>
+<li id="l118"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l119"><pre>      <span class="keyword">accept</span> <a href="src_pipelined_insersort.adb.html#l38" title="defined at pipelined_insersort.adb:38:13">Link</a> (Next_Node : <a href="src_pipelined_insersort.adb.html#l35" title="defined at pipelined_insersort.adb:35:9">Node_Access</a>) <span class="keyword">do</span> </pre></li>
+<li id="l120"><pre>         Next := <a href="src_pipelined_insersort.adb.html#l38" title="defined at pipelined_insersort.adb:38:19">Next_Node</a>; </pre></li>
+<li id="l121"><pre>      <span class="keyword">end</span> <span class="droplink">Link<ul><li><a href="src_pipelined_insersort.adb.html#l38" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l119" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l122"><pre> </pre></li>
+<li id="l123"><pre>      <span class="keyword">while</span> Node_Active <span class="keyword">loop</span> </pre></li>
+<li id="l124"><pre>         <span class="keyword">accept</span> <a href="src_pipelined_insersort.adb.html#l39" title="defined at pipelined_insersort.adb:39:13">Feed</a> (E : <a href="src_pipelined_insersort.adb.html#l14" title="defined at pipelined_insersort.adb:14:9">Maybe_Element</a>) <span class="keyword">do</span> </pre></li>
+<li id="l125"><pre>            <span class="keyword">if</span> E.Valid <span class="keyword">and</span> <span class="keyword">then</span> Max_Element.Get.Valid <span class="keyword">and</span> <span class="keyword">then</span> E.Value &gt;= Max_Element.Get.Value <span class="keyword">then</span> </pre></li>
+<li id="l126"><pre>               Next.<span class="keyword">all</span>.<span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l39" title="defined at pipelined_insersort.adb:39:19">E</a>); </pre></li>
+<li id="l127"><pre>            <span class="keyword">else</span> </pre></li>
+<li id="l128"><pre>               <span class="droplink">Queue.Enqueue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:17:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l17" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l9" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l39" title="defined at pipelined_insersort.adb:39:19">E</a>); </pre></li>
+<li id="l129"><pre>            <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l130"><pre>            Node_Active := E.Valid; </pre></li>
+<li id="l131"><pre>         <span class="keyword">end</span> <span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l132"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l133"><pre> </pre></li>
+<li id="l134"><pre>   <span class="keyword">exception</span> </pre></li>
+<li id="l135"><pre>      <span class="keyword">when</span> E : <span class="keyword">others</span> =&gt; Put_Line (Exception_Information (E)); </pre></li>
+<li id="l136"><pre>   <span class="keyword">end</span> <span class="droplink">Node<ul><li><a href="src_pipelined_insersort.adb.html#l37" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l42" title="To body">To body</a></li></ul></span>; </pre></li>
+<li id="l137"><pre> </pre></li>
+<li id="l138"><pre>   Nodes : <span class="keyword">array</span> (1 .. <a href="src_pipelined_insersort.adb.html#l9" title="defined at pipelined_insersort.adb:9:4">No_of_Nodes</a>) <span class="keyword">of</span> <span class="keyword">aliased</span> <a href="src_pipelined_insersort.adb.html#l34" title="defined at pipelined_insersort.adb:34:9">Node</a>; </pre></li>
+<li id="l139"><pre> </pre></li>
+<li id="l140"><pre><span class="keyword">begin</span> </pre></li>
+<li id="l141"><pre>   Put_Line (<span class="string">&quot;--- Providing nodes with next-node link&quot;</span>); </pre></li>
+<li id="l142"><pre>   <span class="keyword">for</span> n <span class="keyword">in</span> <a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a>&apos;First .. <a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a>&apos;Last - 1 <span class="keyword">loop</span> </pre></li>
+<li id="l143"><pre>      <a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a> (n).<span class="droplink">Link<ul><li><a href="src_pipelined_insersort.adb.html#l38" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l119" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a> (n + 1)&apos;Access); </pre></li>
+<li id="l144"><pre>   <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l145"><pre>   <a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a> (<a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a>&apos;Last).<span class="droplink">Link<ul><li><a href="src_pipelined_insersort.adb.html#l38" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l119" title="To body">To body</a></li></ul></span> (<span class="keyword">null</span>); </pre></li>
+<li id="l146"><pre> </pre></li>
+<li id="l147"><pre>   Put_Line (<span class="string">&quot;--- Feeding in&quot;</span> &amp; Positive&apos;Image (<a href="src_pipelined_insersort.adb.html#l10" title="defined at pipelined_insersort.adb:10:4">Data_Stream_Length</a>) &amp; <span class="string">&quot; random elements&quot;</span>); </pre></li>
+<li id="l148"><pre>   Reset (<a href="src_pipelined_insersort.adb.html#l28" title="defined at pipelined_insersort.adb:28:4">Element_Generator</a>); </pre></li>
+<li id="l149"><pre>   <span class="keyword">for</span> i <span class="keyword">in</span> 1 .. <a href="src_pipelined_insersort.adb.html#l10" title="defined at pipelined_insersort.adb:10:4">Data_Stream_Length</a> <span class="keyword">loop</span> </pre></li>
+<li id="l150"><pre>      <a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a> (<a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a>&apos;First).<span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l23" title="defined at pipelined_insersort.adb:23:13">Valid_Element</a> (Random (<a href="src_pipelined_insersort.adb.html#l28" title="defined at pipelined_insersort.adb:28:4">Element_Generator</a>))); </pre></li>
+<li id="l151"><pre>   <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l152"><pre> </pre></li>
+<li id="l153"><pre>   Put_Line (<span class="string">&quot;--- Feeding in end of data stream token&quot;</span>); </pre></li>
+<li id="l154"><pre>   <a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a> (<a href="src_pipelined_insersort.adb.html#l138" title="defined at pipelined_insersort.adb:138:4">Nodes</a>&apos;First).<span class="droplink">Feed<ul><li><a href="src_pipelined_insersort.adb.html#l39" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l124" title="To body">To body</a></li></ul></span> (<a href="src_pipelined_insersort.adb.html#l22" title="defined at pipelined_insersort.adb:22:13">Invalid_Element</a>); </pre></li>
+<li id="l155"><pre> </pre></li>
+<li id="l156"><pre>   <span class="keyword">declare</span> </pre></li>
+<li id="l157"><pre>      Prior_Result, Result : <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a> := <a href="src_pipelined_insersort.adb.html#l12" title="defined at pipelined_insersort.adb:12:9">Element</a>&apos;Invalid_Value; </pre></li>
+<li id="l158"><pre>   <span class="keyword">begin</span> </pre></li>
+<li id="l159"><pre>      <span class="droplink">Result_Queue.Dequeue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:18:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l17" title="To body">To body</a></li></ul></span> (Prior_Result); </pre></li>
+<li id="l160"><pre>      <span class="keyword">for</span> i <span class="keyword">in</span> 1 .. <a href="src_pipelined_insersort.adb.html#l10" title="defined at pipelined_insersort.adb:10:4">Data_Stream_Length</a> - 1 <span class="keyword">loop</span> </pre></li>
+<li id="l161"><pre>         <span class="droplink">Result_Queue.Dequeue<ul><li><a href="queue_pack_protected_generic.ads.html#queue_pack_protected_generic.ads:18:13" title="To API doc">To API doc</a></li><li><a href="src_queue_pack_protected_generic.ads.html#l18" title="To spec">To spec</a></li><li><a href="src_queue_pack_protected_generic.adb.html#l17" title="To body">To body</a></li></ul></span> (Result); </pre></li>
+<li id="l162"><pre>         <span class="keyword">if</span> Prior_Result &gt; Result <span class="keyword">then</span> </pre></li>
+<li id="l163"><pre>            <span class="keyword">raise</span> Program_Error <span class="keyword">with</span> <span class="string">&quot;Found out of order elements&quot;</span>; </pre></li>
+<li id="l164"><pre>         <span class="keyword">end</span> <span class="keyword">if</span>; </pre></li>
+<li id="l165"><pre>         Prior_Result := Result; </pre></li>
+<li id="l166"><pre>      <span class="keyword">end</span> <span class="keyword">loop</span>; </pre></li>
+<li id="l167"><pre>   <span class="keyword">end</span>; </pre></li>
+<li id="l168"><pre> </pre></li>
+<li id="l169"><pre>   Put_Line (<span class="string">&quot;--- Terminated with an ordered list&quot;</span>); </pre></li>
+<li id="l170"><pre> </pre></li>
+<li id="l171"><pre><span class="keyword">end</span> <span class="droplink">Pipelined_Insersort<ul><li><a href="src_pipelined_insersort.adb.html#l7" title="To spec">To spec</a></li><li><a href="src_pipelined_insersort.adb.html#l7" title="To body">To body</a></li></ul></span>; </pre></li>
+</ol></div>
+</div>
+
+</body>
+</html>

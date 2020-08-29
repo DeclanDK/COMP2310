@@ -1,0 +1,27 @@
+ordered_bounded_list.adb:2:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:4:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:6:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:9:54: (style) trailing spaces not permitted
+ordered_bounded_list.adb:10:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:12:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:13:09: (style) trailing spaces not permitted
+ordered_bounded_list.adb:14:24: (style) trailing spaces not permitted
+ordered_bounded_list.adb:18:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:22:41: (style) trailing spaces not permitted
+ordered_bounded_list.adb:25:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:26:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:28:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:34:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:35:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:36:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:39:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:41:01: (style) trailing spaces not permitted
+ordered_bounded_list.adb:43:01: (style) trailing spaces not permitted
+ordered_bounded_list.ads:1:17: (style) trailing spaces not permitted
+ordered_bounded_list.ads:3:08: (style) trailing spaces not permitted
+ordered_bounded_list.ads:4:01: (style) trailing spaces not permitted
+ordered_bounded_list.ads:6:48: (style) space required
+ordered_bounded_list.ads:8:01: (style) trailing spaces not permitted
+ordered_bounded_list.ads:12:01: (style) trailing spaces not permitted
+ordered_bounded_list.ads:14:01: (style) trailing spaces not permitted
+ordered_bounded_list.ads:16:01: (style) trailing spaces not permitted

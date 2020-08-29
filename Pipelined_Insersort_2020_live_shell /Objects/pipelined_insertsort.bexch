@@ -1,0 +1,22 @@
+[GENERATED OBJECT FILE]
+b__pipelined_insertsort.o
+[PROJECT FILES]
+/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /pipelined_insertsort.gpr
+20200821030508
+[BOUND OBJECT FILES]
+/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/maybe_type.o
+/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/ordered_bounded_list.o
+/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/queue_pack_protected_generic.o
+/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/sync_type.o
+/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/pipelined_insertsort.o
+[GENERATED SOURCE FILES]
+b__pipelined_insertsort.ads
+b__pipelined_insertsort.adb
+b__pipelined_insertsort.ali
+[RESULTING OPTIONS]
+-L/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/
+-L/Users/declan/Desktop/COMP2310/Pipelined_Insersort_2020_live_shell /Objects/
+-L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
+-static
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a
+/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnat.a

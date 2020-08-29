@@ -1,0 +1,132 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -g
+A -g
+A -gnato
+A -fstack-check=specific
+A -gnatE
+A -gnat12
+A -gnata
+A -gnatn
+A -funroll-loops
+A -gnatVa
+A -gnatw.a
+A -gnatw.b
+A -gnatw.c
+A -gnatw.d
+A -gnatw.f
+A -gnatw.g
+A -gnatw.h
+A -gnatw.i
+A -gnatw.j
+A -gnatw.k
+A -gnatw.l
+A -gnatw.m
+A -gnatw.n
+A -gnatw.o
+A -gnatw.p
+A -gnatw.q
+A -gnatw.r
+A -gnatw.s
+A -gnatw.t
+A -gnatw.u
+A -gnatw.v
+A -gnatw.w
+A -gnatw.x
+A -gnatw.z
+A -gnatwc
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatwi
+A -gnatwj
+A -gnatwk
+A -gnatwl
+A -gnatwm
+A -gnatwo
+A -gnatwp
+A -gnatwq
+A -gnatwr
+A -gnatwt
+A -gnatwu
+A -gnatwv
+A -gnatww
+A -gnatwx
+A -gnatwy
+A -gnatwz
+A -gnatyA
+A -gnatyB
+A -gnatyC
+A -gnatyI
+A -gnatyO
+A -gnatyS
+A -gnatya
+A -gnatyb
+A -gnatyc
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyp
+A -gnatyr
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -mtune=core2
+A -mmacosx-version-min=10.15.0
+A -fPIC
+A -feliminate-unused-debug-symbols
+P ZX
+
+RN
+RV SIMPLE_BARRIERS
+RV PURE_BARRIERS
+RV NO_INITIALIZE_SCALARS
+RV NO_PROTECTED_TYPES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+RV MAX_PROTECTED_ENTRIES=2
+RV MAX_ENTRY_QUEUE_LENGTH=1+
+
+U queue_pack_protected_generic%b  queue_pack_protected_generic.adb  f0d22251 DE NE OO PK GE
+
+U queue_pack_protected_generic%s  queue_pack_protected_generic.ads  7d07423e BN DE EE NE OO PK GE
+
+D queue_pack_protected_generic.ads  20190820040444 7d07423e queue_pack_protected_generic%s
+D queue_pack_protected_generic.adb  20200821025026 8dd5606f queue_pack_protected_generic%b
+D system.ads		20190518041255 085b6ffb system%s
+G a e
+G c Z s b [queue_pack_protected_generic standard 11 9 none]
+X 1 queue_pack_protected_generic.ads
+8+9 Element 17r33 18r33 30r61 34r34 2|9r29 17r33 41r61 43r14
+9i4 Size{positive} 33r40 2|13r56 21r55
+11k9*Queue_Pack_Protected_Generic 8z9 9z4 33E12 40l5 40e33 2|5b14 50l5 50t33
+13R9*Queue_Type 26r15 35c9 39e14
+15W19*Protected_Queue 26E7 28l8 28e23 30r37 2|7b19 39l8 39t23 41r37
+17Y13 Enqueue 17>22 2|9b13 15l11 15t18
+17*22 Item{8+9} 2|12r41
+18Y13 Dequeue 18<22 2|17b13 23l11 23t18 46s13
+18*22 Item{8+9} 2|20m10
+20U17 Empty_Queue 2|25b17 31l11 31t22
+22V16 Is_Empty{boolean} 2|17s51 33b16
+23V16 Is_Full{boolean} 2|9s47 36b16
+26r7 Queue{13R9} 2|12m10 12r26 13m10 13r40 14m10 20r28 20r44 21m10 21r40
+. 22m10 22r28 22r40 28m10 29m10 30m10 34r10 37r14 37r38 37r50
+30V13*Dequeue{8+9} 30=22 2|41b13 48l8 48t15
+30w22 Queue{15W19} 2|41b22 46r7
+33I12 Index{natural} 34r24 36r19 36r30 2|13r28 21r28 28r28 29r28
+34A9 List(8+9)<integer> 38r19
+36i7 Top{33I12} 2|20r50 21m16 21r46 22r34 28m16 37r44
+36i12 Free{33I12} 2|12r32 13m16 13r46 22r46 29m16 37r56
+37b7 Is_Empty{boolean} 2|14m16 22m16 30m16 34r16 37r20
+38a7 Elements{34A9} 2|12m16 20r34
+X 2 queue_pack_protected_generic.adb
+9*22 Item{1|8+9}
+17*22 Item{1|8+9}
+43*7 Item{1|8+9} 46m22 47r14
+

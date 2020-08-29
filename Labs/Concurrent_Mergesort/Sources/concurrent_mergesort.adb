@@ -1,5 +1,5 @@
 with Ada.Exceptions; use Ada.Exceptions; -- you might need this in case somebody put a bug in your program
-with Ada.Text_IO;    use Ada.Text_IO;    -- you might need this to tell what bug it was
+  with Ada.Text_IO;    use Ada.Text_IO;    -- you might need this to tell what bug it was
 with CPU_Counter;    use CPU_Counter;
 
 procedure Concurrent_Mergesort (Sort_Field : in out Element_Array) is

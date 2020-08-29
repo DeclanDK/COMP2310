@@ -278,9 +278,9 @@ package body ada_main is
    end;
 
 --  BEGIN Object file/option list
-   --   /Users/declan/Desktop/COMP2310/Synchronized_Action/Objects/synchronized_action.o
-   --   -L/Users/declan/Desktop/COMP2310/Synchronized_Action/Objects/
-   --   -L/Users/declan/Desktop/COMP2310/Synchronized_Action/Objects/
+   --   /Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/Objects/synchronized_action.o
+   --   -L/Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/Objects/
+   --   -L/Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/Objects/
    --   -L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
    --   -static
    --   -lgnarl

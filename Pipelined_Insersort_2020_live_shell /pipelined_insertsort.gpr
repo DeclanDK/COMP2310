@@ -1,0 +1,26 @@
+project Pipelined_Insertsort is
+
+   for Source_Dirs use ("Sources/**");
+   for Object_Dir use "Objects/";
+   for Exec_Dir use "Executables/";
+   for Main use ("pipelined_insertsort.adb");
+
+   package Ide is
+      for Documentation_Dir use "Documentation/";
+   end Ide;
+
+   package Builder is
+      for Default_Switches ("ada") use ("-s", "-m", "-g");
+   end Builder;
+
+   package Compiler is
+      for Default_Switches ("ada") use ("-g", "-gnato", "-fstack-check", "-gnatE", "-gnat12", "-gnata", "-O2", "-gnatn", "-funroll-loops", "-gnatVa", 
+         "-gnatw.a.b.c.d.f.g.h.i.j.k.l.m.n.o.p.q.r.s.t.u.v.w.x.zcdfghijklmopqrtuvwxyz", "-gnatyABCIOSabcefhiklnprtux");
+   end Compiler;
+
+   package Linker is
+      for Default_Switches ("ada") use ("-g");
+   end Linker;
+
+end Pipelined_Insertsort;
+

@@ -9,14 +9,18 @@ procedure Synchronized_Action is
 
       entry Synchronize;
 
+   private
+
+      Barrier_Open : Boolean := False;
+
    end Blockers;
 
    protected body Blockers is
 
-      entry Synchronize when Synchronize'Count mod Group_Size = 0 is
+      entry Synchronize when Synchronize'Count = Group_Size or else Barrier_Open is
 
       begin
-         null;
+         Barrier_Open := Synchronize'Count > 0;
       end Synchronize;
 
    end Blockers;

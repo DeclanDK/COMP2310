@@ -1,0 +1,109 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -g
+A -g
+A -gnato
+A -fstack-check=specific
+A -gnatE
+A -gnat12
+A -gnata
+A -gnatn
+A -funroll-loops
+A -gnatVa
+A -gnatw.a
+A -gnatw.b
+A -gnatw.c
+A -gnatw.d
+A -gnatw.f
+A -gnatw.g
+A -gnatw.h
+A -gnatw.i
+A -gnatw.j
+A -gnatw.k
+A -gnatw.l
+A -gnatw.m
+A -gnatw.n
+A -gnatw.o
+A -gnatw.p
+A -gnatw.q
+A -gnatw.r
+A -gnatw.s
+A -gnatw.t
+A -gnatw.u
+A -gnatw.v
+A -gnatw.w
+A -gnatw.x
+A -gnatw.z
+A -gnatwc
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatwi
+A -gnatwj
+A -gnatwk
+A -gnatwl
+A -gnatwm
+A -gnatwo
+A -gnatwp
+A -gnatwq
+A -gnatwr
+A -gnatwt
+A -gnatwu
+A -gnatwv
+A -gnatww
+A -gnatwx
+A -gnatwy
+A -gnatwz
+A -gnatyA
+A -gnatyB
+A -gnatyC
+A -gnatyI
+A -gnatyO
+A -gnatyS
+A -gnatya
+A -gnatyb
+A -gnatyc
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyp
+A -gnatyr
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -mtune=core2
+A -mmacosx-version-min=10.15.0
+A -fPIC
+A -feliminate-unused-debug-symbols
+P ZX
+
+RN
+RV NO_PROTECTED_TYPES
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U sync_type%b		sync_type.adb		ea9e5307 DE NE OO PK GE
+
+U sync_type%s		sync_type.ads		65f679cb BN DE EE NE OO PK GE
+
+D sync_type.ads		20200821022828 65f679cb sync_type%s
+D sync_type.adb		20200821025050 8f682acc sync_type%b
+D system.ads		20190518041255 085b6ffb system%s
+G a e
+G c Z s b [sync_type standard 6 9 none]
+X 1 sync_type.ads
+3+9 Element 4r14 10r28 11r28 15r15 2|5r28 11r28
+4*4 Default{3+9} 15r26
+6k9*Sync_Type 3z9 4z4 19l5 19e14 2|1b14 15l5 15t14
+8W19*Protect 15E7 17l8 17e15 2|3b19 13l8 13t15
+10U17 Write 10>24 2|5b17 9l11 9t16
+10*24 E{3+9} 2|5b24 8r19
+11V16 Read{3+9} 2|11b16
+15*7 Value{3+9} 2|8m10 11r40
+

@@ -1,17 +1,17 @@
 [GENERATED OBJECT FILE]
 b__synchronized_action.o
 [PROJECT FILES]
-/Users/declan/Desktop/COMP2310/Synchronized_Action/synchronized_action.gpr
+/Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/synchronized_action.gpr
 20150809005934
 [BOUND OBJECT FILES]
-/Users/declan/Desktop/COMP2310/Synchronized_Action/Objects/synchronized_action.o
+/Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/Objects/synchronized_action.o
 [GENERATED SOURCE FILES]
 b__synchronized_action.ads
 b__synchronized_action.adb
 b__synchronized_action.ali
 [RESULTING OPTIONS]
--L/Users/declan/Desktop/COMP2310/Synchronized_Action/Objects/
--L/Users/declan/Desktop/COMP2310/Synchronized_Action/Objects/
+-L/Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/Objects/
+-L/Users/declan/Desktop/COMP2310/Labs/Synchronized_Action/Objects/
 -L/users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/
 -static
 /users/declan/opt/gnat/2019/lib/gcc/x86_64-apple-darwin17.7.0/8.3.1/adalib/libgnarl.a

@@ -1,0 +1,104 @@
+V "GNAT Lib v2019"
+A -O2
+A -gnatA
+A -g
+A -g
+A -gnato
+A -fstack-check=specific
+A -gnatE
+A -gnat12
+A -gnata
+A -gnatn
+A -funroll-loops
+A -gnatVa
+A -gnatw.a
+A -gnatw.b
+A -gnatw.c
+A -gnatw.d
+A -gnatw.f
+A -gnatw.g
+A -gnatw.h
+A -gnatw.i
+A -gnatw.j
+A -gnatw.k
+A -gnatw.l
+A -gnatw.m
+A -gnatw.n
+A -gnatw.o
+A -gnatw.p
+A -gnatw.q
+A -gnatw.r
+A -gnatw.s
+A -gnatw.t
+A -gnatw.u
+A -gnatw.v
+A -gnatw.w
+A -gnatw.x
+A -gnatw.z
+A -gnatwc
+A -gnatwd
+A -gnatwf
+A -gnatwg
+A -gnatwh
+A -gnatwi
+A -gnatwj
+A -gnatwk
+A -gnatwl
+A -gnatwm
+A -gnatwo
+A -gnatwp
+A -gnatwq
+A -gnatwr
+A -gnatwt
+A -gnatwu
+A -gnatwv
+A -gnatww
+A -gnatwx
+A -gnatwy
+A -gnatwz
+A -gnatyA
+A -gnatyB
+A -gnatyC
+A -gnatyI
+A -gnatyO
+A -gnatyS
+A -gnatya
+A -gnatyb
+A -gnatyc
+A -gnatye
+A -gnatyf
+A -gnatyh
+A -gnatyi
+A -gnatyk
+A -gnatyl
+A -gnatyn
+A -gnatyp
+A -gnatyr
+A -gnatyt
+A -gnatyu
+A -gnatyx
+A -mtune=core2
+A -mmacosx-version-min=10.15.0
+A -fPIC
+A -feliminate-unused-debug-symbols
+P ZX
+
+RN
+RV NO_IMPLEMENTATION_PRAGMAS
+RV SPARK_05
+
+U maybe_type%s		maybe_type.ads		c1f36948 DE NE OO PK GE
+
+D maybe_type.ads	20200829031148 c1f36948 maybe_type%s
+D system.ads		20190518041255 085b6ffb system%s
+G a e
+X 1 maybe_type.ads
+3+9 Element 10r34 16r30
+5k9*Maybe_Type 3z9 19l5 19e15
+7R9*Maybe 7d16 13e17 15r29 16r46
+7b16 Valid{boolean} 9r15 15m39 17m7
+10*26 Value{3+9} 17m22
+15r4*Invalid_Value{7R9}
+16V13*Valid_Value{7R9} 16>26
+16*26 E{3+9} 17r31
+

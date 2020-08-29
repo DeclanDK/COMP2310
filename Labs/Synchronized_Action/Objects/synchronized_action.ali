@@ -110,7 +110,7 @@ RV MAX_PROTECTED_ENTRIES=1
 RV MAX_TASKS=1+
 RV MAX_ENTRY_QUEUE_LENGTH=1+
 
-U synchronized_action%b	synchronized_action.adb	a0b30220 DE NE OO SU
+U synchronized_action%b	synchronized_action.adb	4d9e6b63 DE NE OO SU
 W ada%s			ada.ads			ada.ali
 Z ada.calendar.delays%s	a-caldel.adb		a-caldel.ali
 Z ada.exceptions%s	a-except.adb		a-except.ali
@@ -118,6 +118,7 @@ Z ada.real_time%s	a-reatim.adb		a-reatim.ali
 Z ada.tags%s		a-tags.adb		a-tags.ali
 W ada.task_identification%s  a-taside.adb	a-taside.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
+Z interfaces%s		interfac.ads		interfac.ali
 Z system%s		system.ads		system.ali
 Z system.concat_3%s	s-conca3.adb		s-conca3.ali
 Z system.img_int%s	s-imgint.adb		s-imgint.ali
@@ -147,7 +148,7 @@ D a-unccon.ads		20190518041255 0e9b276f ada.unchecked_conversion%s
 D interfac.ads		20190518041254 5ab55268 interfaces%s
 D i-c.ads		20190518041254 5421119b interfaces.c%s
 D i-cstrea.ads		20190518041254 e53d8b8e interfaces.c_streams%s
-D synchronized_action.adb  20200820020717 0ea474bb synchronized_action%b
+D synchronized_action.adb  20200829043101 e3891df8 synchronized_action%b
 D system.ads		20190518041255 085b6ffb system%s
 D s-atacco.ads		20190518041256 4c36d12f system.address_to_access_conversions%s
 D s-conca3.ads		20190518041256 0b705ca5 system.concat_3%s
@@ -186,20 +187,21 @@ X 1 ada.ads
 X 10 a-taside.ads
 45K13*Task_Identification 104e28 16|1w10 1r39
 53P9*Task_Id<40|109P9>
-62V13*Image{string} 16|31s27 36s27 41s27
-65V13*Current_Task{53P9} 16|31s34 36s34 41s34
+62V13*Image{string} 16|35s27 40s27 45s27
+65V13*Current_Task{53P9} 16|35s34 40s34 45s34
 X 11 a-textio.ads
 57K13*Text_IO 727e16 16|2w10 2r39
-508U14*Put_Line 16|31s7 36s7 41s7
+508U14*Put_Line 16|35s7 40s7 45s7
 X 16 synchronized_action.adb
-4U11*Synchronized_Action 4b11 48l5 48t24
-6i4 No_Of_Tasks{positive} 24r24 44r31
-8W19 Blockers 8d29 12l8 12e16 14b19 22l8 22t16 24r14
-8i29 Group_Size{positive} 16r52
-10Y13 Synchronize 16b13 16r30 20l11 20t22 34s15 39s15
-24w4 Blocker{8W19} 34r7 39r7
-26T14 In_Synchronized_Stages 28b14 42l8 42t30 44r47
-44a4 Staged_Tasks(26T14) 44r92
+4U11*Synchronized_Action 4b11 52l5 52t24
+6i4 No_Of_Tasks{positive} 28r24 48r31
+8W19 Blockers 8d29 14E7 16l8 16e16 18b19 26l8 26t16 28r14
+8i29 Group_Size{positive} 20r50
+10Y13 Synchronize 20b13 20r30 23r26 24l11 24t22 38s15 43s15
+14b7 Barrier_Open{boolean} 20r69 23r10
+28w4 Blocker{8W19} 38r7 43r7
+30T14 In_Synchronized_Stages 32b14 46l8 46t30 48r47
+48a4 Staged_Tasks(30T14) 48r92
 X 17 system.ads
 67M9*Address
 X 25 s-memory.ads
